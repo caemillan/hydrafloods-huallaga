@@ -15387,61 +15387,6 @@ for (let c of document.getElementsByClassName("ee-toggle")) {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Load an image.</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">water_map_fuzzy_outsu</span> <span class="c1">#ee.Image('LANDSAT/LC08/C01/T1_TOA/LC08_044034_20140318')</span>
-
-<span class="c1"># https://github.com/giswqs/earthengine-py-notebooks/blob/master/Image/image_visualization.ipynb</span>
-
-<span class="c1"># Request a default thumbnail of the DEM with defined linear stretch.</span>
-<span class="c1"># Set masked pixels (ocean) to 1000 so they map as gray.</span>
-<span class="n">thumbnail1</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">getThumbURL</span><span class="p">({</span>
-  <span class="s1">'min'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-  <span class="s1">'max'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-  <span class="s1">'dimensions'</span><span class="p">:</span> <span class="mi">1024</span><span class="p">,</span>
-  <span class="s1">'crs'</span><span class="p">:</span> <span class="s1">'EPSG:32718'</span><span class="p">,</span>
-  <span class="s1">'palette'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'#fae7b5'</span><span class="p">,</span><span class="s1">'#318ce7'</span><span class="p">,</span><span class="s1">'#E6E600'</span><span class="p">,</span><span class="s1">'#E9BD3A'</span><span class="p">,</span><span class="s1">'#ECB176'</span><span class="p">,</span><span class="s1">'#EFC2B3'</span><span class="p">,</span><span class="s1">'#F2F2F2'</span><span class="p">,</span><span class="s1">'#318ce7'</span><span class="p">],</span>
-  <span class="s1">'region'</span><span class="p">:</span> <span class="n">region</span> <span class="c1">#ee.Geometry.Rectangle([-84.6, -55.9, -32.9, 15.7]),</span>
-  <span class="c1">#'region': ee.Geometry.Rectangle([103, 11.4, 107, 12.6 ])</span>
-<span class="p">})</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Default extent and size:'</span><span class="p">,</span> <span class="n">thumbnail1</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Default extent and size: https://earthengine.googleapis.com/v1alpha/projects/earthengine-legacy/thumbnails/6dfd451793f652ffe652e5ed6ee91492-6d2186eb6a0c3409a28e221337b7f6d6:getPixels
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a default map</span>
 <span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 
